@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html" charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="keywords">
+    <meta name="description" content="description">
+    <meta name="author" content="Bun Vladimir, qwelp">
+    <title>ЭпплShop</title>
+    <link rel="shortcup icon" href="/favicon.ico" type="images/x-icone">
+    <link rel="icon" href="/favicone.ico" type="image/x-icon">
+    <link rel="stylesheet" media="all" type="text/css" href="css/main.css">
+    <script src="bower/modernizer/modernizr.js"></script>
+  </head>
+  <body><!--[if lt IE 7]><p class="browsehappy">Вы используете <strong>устаревший</strong> браузер. Пожалуйста <a href="http://browsehappy.com">обновите</a> его.</p><![endif]-->
+    <div class="wrapper">
+      <div class="container">
+        <aside class="wrapper__left">
+          <div class="logo"><a href="/"><img src="images/logo.png" alt="ЭпплShop"></a></div>
+          <div class="callback">
+            <div class="callback__title">Заказать звонок</div>
+            <div class="form">
+              <form action="">
+                <div class="form__row">
+                  <div class="form__col-w50 form__col-title">Ваше имя</div>
+                  <div class="form__col-w50">
+                    <input type="text" placeholder="Константин" class="callback__inputText">
+                  </div>
+                </div>
+                <div class="form__row">
+                  <div class="form__col-w50 form__col-title">Телефон</div>
+                  <div class="form__col-w50">
+                    <input type="text" placeholder="+7 (916) 000-00-00" class="callback__inputText">
+                  </div>
+                </div>
+                <div class="form__row">
+                  <div class="form__col-w33 form__col-title">Дата Звонка</div>
+                  <div class="form__col-w33">
+                    <select name="day" class="callback__select">
+                      <option value="01">01</option>
+                      <option value="02">02</option>
+                      <option value="03">03</option>
+                      <option value="04">04</option>
+                      <option value="05">05</option>
+                      <option value="06">06</option>
+                      <option value="07">07</option>
+                      <option value="08">08</option>
+                      <option value="09">09</option>
+                      <option value="10">10</option>
+                      <option value="11">11</option>
+                      <option value="12">12</option>
+                      <option value="13">13</option>
+                      <option value="14">14</option>
+                      <option value="15">15</option>
+                      <option value="16">16</option>
+                      <option value="17">17</option>
+                      <option value="18">18</option>
+                      <option value="19">19</option>
+                      <option value="20">20</option>
+                      <option value="21">21</option>
+                      <option value="22">22</option>
+                      <option value="23">23</option>
+                    </select>
+                  </div>
+                  <div class="form__col-w33">
+                    <select name="day" class="callback__select">
+                      <option value="01">01</option>
+                      <option value="02">02</option>
+                      <option value="03">03</option>
+                      <option value="04">04</option>
+                      <option value="05">05</option>
+                      <option value="06">06</option>
+                      <option value="07">07</option>
+                      <option value="08">08</option>
+                      <option value="09">09</option>
+                      <option value="10">10</option>
+                      <option value="11">11</option>
+                      <option value="12">12</option>
+                      <option value="13">13</option>
+                      <option value="14">14</option>
+                      <option value="15">15</option>
+                      <option value="16">16</option>
+                      <option value="17">17</option>
+                      <option value="18">18</option>
+                      <option value="19">19</option>
+                      <option value="20">20</option>
+                      <option value="21">21</option>
+                      <option value="22">22</option>
+                      <option value="23">23</option>
+                      <option value="24">24</option>
+                      <option value="25">25</option>
+                      <option value="26">26</option>
+                      <option value="27">27</option>
+                      <option value="28">28</option>
+                      <option value="29">29</option>
+                      <option value="30">30</option>
+                      <option value="31">31</option>
+                      <option value="32">32</option>
+                      <option value="33">33</option>
+                      <option value="34">34</option>
+                      <option value="35">35</option>
+                      <option value="36">36</option>
+                      <option value="37">37</option>
+                      <option value="38">38</option>
+                      <option value="39">39</option>
+                      <option value="40">40</option>
+                      <option value="41">41</option>
+                      <option value="42">42</option>
+                      <option value="43">43</option>
+                      <option value="44">44</option>
+                      <option value="45">45</option>
+                      <option value="46">46</option>
+                      <option value="47">47</option>
+                      <option value="48">48</option>
+                      <option value="49">49</option>
+                      <option value="50">50</option>
+                      <option value="51">51</option>
+                      <option value="52">52</option>
+                      <option value="53">53</option>
+                      <option value="54">54</option>
+                      <option value="55">55</option>
+                      <option value="56">56</option>
+                      <option value="57">57</option>
+                      <option value="58">58</option>
+                      <option value="59">59</option>
+                      <option value="60">60</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="form__row">
+                  <div class="form__col-w100">
+                    <textarea placeholder="Комментарий" class="callback__textarea"></textarea>
+                  </div>
+                </div>
+                <div class="form__row">
+                  <div class="form__col-w50">
+                    <button class="btn">Отправить</button>
+                  </div>
+                  <div class="form__col-w50 alignRight">
+                    <button class="btn btn-grey">Очистить</button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+          <div class="gallery">
+            <ul class="gallery__list">
+              <li class="gallery__item"><a href="#"><img src="images/gal-1.png" alt=""></a></li>
+              <li class="gallery__item"><a href="#"><img src="images/gal-2.png" alt=""></a></li>
+              <li class="gallery__item"><a href="#"><img src="images/gal-3.png" alt=""></a></li>
+              <li class="gallery__item"><a href="#"><img src="images/gal-4.png" alt=""></a></li>
+              <li class="gallery__item"><a href="#"><img src="images/gal-5.png" alt=""></a></li>
+              <li class="gallery__item"><a href="#"><img src="images/gal-6.png" alt=""></a></li>
+              <li class="gallery__item"><a href="#"><img src="images/gal-7.png" alt=""></a></li>
+              <li class="gallery__item"><a href="#"><img src="images/gal-8.png" alt=""></a></li>
+              <li class="gallery__item"><a href="#"><img src="images/gal-9.png" alt=""></a></li>
+            </ul>
+          </div>
+          <div class="contact">
+            <ul class="contact__list">
+              <li class="contact__items">
+                <div class="contact__items-adress">г.Москва ул. Новая 246, офис 214</div>
+              </li>
+              <li class="contact__items">
+                <div class="contact__items-phone">+7(921) 322-12-32</div>
+              </li>
+            </ul>
+          </div>
+        </aside>
+        <main class="wrapper__right">
+          <div class="slider">
+            <div class="slider__wrap">
+              <ul class="slider__list">
+                <li class="slider__item active"><a href="#"><img src="images/slide-1.png" alt="" class="slider__pic"></a>
+                  <div class="slider__itemInfo">
+                    <div class="slider__itemInfo--wrap"><a href="#" alt="">iMac за пол цены</a>
+                      <p>Прини свой старый Mac  и получи скидку на новый!</p>
+                    </div>
+                  </div>
+                </li>
+                <li class="slider__item"><a href="#"><img src="images/slide-2.png" alt="" class="slider__pic"></a>
+                  <div class="slider__itemInfo">
+                    <div class="slider__itemInfo--wrap"><a href="#" alt="">До 31 декабря, iPhone 4 за 9900 руб.</a>
+                      <p>Нет денег на шестой iPhone? Купи себе четвертый!</p>
+                    </div>
+                  </div>
+                </li>
+                <li class="slider__item"><a href="#"><img src="images/slide-3.png" alt="" class="slider__pic"></a>
+                  <div class="slider__itemInfo">
+                    <div class="slider__itemInfo--wrap"><a href="#" alt="">Конкурс на концепт IPhone 7</a>
+                      <p>Выйграй iPad Air за самый необычный  и интереный дизайн нового iPhone 7.</p>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="slider__controls"><a class="slider__controls-button slider__controls-prev">Пред.</a><a class="slider__controls-button slider__controls-next">След.</a></div>
+          </div>
+          <div class="product">
+            <div class="product__title">
+              <div class="product__title-text">Популярные товары</div>
+            </div>
+            <ul class="product__list">
+              <li class="product__item">
+                <div class="product__item-pic"><a href="#"><img src="images/product-1.png" alt=""></a><a href="#">Apple Thunderb Display 27&quot;</a></div>
+                <ul class="product__item-prop">
+                  <li><span>Артикул</span><span>42787825</span></li>
+                  <li><span>Опция</span><span>включена</span></li>
+                  <li><span>Цвет</span><span>серебристый</span></li>
+                  <li><span>Размер</span><span>1280*1245*90</span></li>
+                  <li><span>Вес</span><span>9 кг</span></li>
+                </ul>
+              </li>
+              <li class="product__item">
+                <div class="product__item-pic"><a href="#"><img src="images/product-2.png" alt=""></a><a href="#">iMac 27&quot;</a></div>
+                <ul class="product__item-prop">
+                  <li><span>Артикул</span><span>42787825</span></li>
+                  <li><span>Опция</span><span>включена</span></li>
+                  <li><span>Цвет</span><span>серебристый</span></li>
+                  <li><span>Размер</span><span>1280*1245*90</span></li>
+                  <li><span>Вес</span><span>9 кг</span></li>
+                </ul>
+              </li>
+              <li class="product__item">
+                <div class="product__item-pic"><a href="#"><img src="images/product-3.png" alt=""></a><a href="#">iPhone 5s Gold</a></div>
+                <ul class="product__item-prop">
+                  <li><span>Артикул</span><span>42787825</span></li>
+                  <li><span>Опция</span><span>включена</span></li>
+                  <li><span>Цвет</span><span>серебристый</span></li>
+                  <li><span>Размер</span><span>1280*1245*90</span></li>
+                  <li><span>Вес</span><span>9 кг</span></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+          <div class="product">
+            <div class="product__title">
+              <div class="product__title-text">Товары со скидкой</div>
+            </div>
+            <ul class="product__list">
+              <li class="product__item">
+                <div class="product__item-pic"><a href="#"><img src="images/product-4.png" alt=""></a><a href="#">iPad Air Wi-Fi 128GB - Silver</a></div>
+                <ul class="product__item-prop">
+                  <li><span>Артикул</span><span>42787825</span></li>
+                  <li><span>Опция</span><span>включена</span></li>
+                  <li><span>Цвет</span><span>серебристый</span></li>
+                  <li><span>Размер</span><span>1280*1245*90</span></li>
+                  <li><span>Вес</span><span>9 кг</span></li>
+                </ul>
+              </li>
+              <li class="product__item">
+                <div class="product__item-pic"><a href="#"><img src="images/product-5.png" alt=""></a><a href="#">Apple iPod nano 7G 16 ГБ Blue</a></div>
+                <ul class="product__item-prop">
+                  <li><span>Артикул</span><span>42787825</span></li>
+                  <li><span>Опция</span><span>включена</span></li>
+                  <li><span>Цвет</span><span>серебристый</span></li>
+                  <li><span>Размер</span><span>1280*1245*90</span></li>
+                  <li><span>Вес</span><span>9 кг</span></li>
+                </ul>
+              </li>
+              <li class="product__item">
+                <div class="product__item-pic"><a href="#"><img src="images/product-6.png" alt=""></a><a href="#">Роутер Wi-Fi Apple AirPort</a></div>
+                <ul class="product__item-prop">
+                  <li><span>Артикул</span><span>42787825</span></li>
+                  <li><span>Опция</span><span>включена</span></li>
+                  <li><span>Цвет</span><span>серебристый</span></li>
+                  <li><span>Размер</span><span>1280*1245*90</span></li>
+                  <li><span>Вес</span><span>9 кг</span></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </main>
+      </div>
+    </div>
+    <footer class="footer">
+      <div class="container">
+        <div class="pageTop"><a href="#" id="js-pageTop">Наверх</a></div>
+        <div class="footer__wrap">
+          <div class="footer__left"><a href="#" class="logoWhite"><img src="images/logo-white.png" alt=""></a></div>
+          <div class="footer__center">
+            <ul class="menuLight">
+              <li class="menuLight__title">О магазине</li>
+              <li class="menuLight__item"><a href="#" class="menuLight__item-link">О нас</a></li>
+              <li class="menuLight__item"><a href="#" class="menuLight__item-link">Наши цены</a></li>
+              <li class="menuLight__item"><a href="#" class="menuLight__item-link">Наши скидки</a></li>
+              <li class="menuLight__item"><a href="#" class="menuLight__item-link">Акции</a></li>
+            </ul>
+            <ul class="menuLight">
+              <li class="menuLight__title">Каталог</li>
+              <li class="menuLight__item"><a href="#" class="menuLight__item-link">Смартфоны</a></li>
+              <li class="menuLight__item"><a href="#" class="menuLight__item-link">Планшеты</a></li>
+              <li class="menuLight__item"><a href="#" class="menuLight__item-link">Компьютеры</a></li>
+              <li class="menuLight__item"><a href="#" class="menuLight__item-link">Аксессуары</a></li>
+            </ul>
+            <ul class="menuLight">
+              <li class="menuLight__title">Контакты</li>
+              <li class="menuLight__item"><a href="#" class="menuLight__item-link">Телефоны</a></li>
+              <li class="menuLight__item"><a href="#" class="menuLight__item-link">Адреса</a></li>
+              <li class="menuLight__item"><a href="#" class="menuLight__item-link">Карта проезда</a></li>
+              <li class="menuLight__item"><a href="#" class="menuLight__item-link">Обратная связь</a></li>
+            </ul>
+          </div>
+          <div class="footer__right">
+            <div class="footer__row">
+              <div class="infoShop"><a href="#" class="infoShop-link"><img src="../images/info-app-store.png" alt=""></a><a href="#" class="infoShop-link"><img src="../images/info-google-play.png" alt=""></a></div>
+            </div>
+            <div class="footer__row">
+              <div class="socials">
+                <ul class="socials__list">
+                  <li class="socials__item"><a href="#" class="socials__item-link socials__item-vk">vk</a></li>
+                  <li class="socials__item"><a href="#" class="socials__item-link socials__item-fb">fb</a></li>
+                  <li class="socials__item"><a href="#" class="socials__item-link socials__item-tw">tw</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script><script>window.jQuery || document.write('<script src="bower/jquery/dist/jquery.min.js"><\/script>')</script>
+  <!--[if lt IE 9]><script src="bower/jquery-placeholder/jquery.placeholder.min.js"></script><![endif]-->
+  <script src="js/main.js"></script>
+</html>

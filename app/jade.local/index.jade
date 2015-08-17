@@ -1,0 +1,163 @@
+mixin listString(classItems, items)
+	each item, index in items
+		li(class=classItems + "__item")
+			a(class=classItems + "__item-link", href="#")= item
+doctype html
+html
+	head
+		meta(http-equiv="Content-Type", content="text/html", charset="utf-8")
+		meta(http-equiv="X-UA-Compatible" content="IE=edge")
+		meta(name="viewport", content="width=device-width, initial-scale=1")
+		meta(name="keywords", content="keywords")
+		meta(name="description", content="description")
+		meta(name="author", content="Bun Vladimir, qwelp")
+		title ЭпплShop
+		link(rel="shortcup icon", href="/favicon.ico", type="images/x-icone")
+		link(rel="icon", href="/favicone.ico", type="image/x-icon")
+		link(rel="stylesheet", media="all", type="text/css", href="css/main.css")
+		script(src="bower/modernizer/modernizr.js")
+	body
+		<!--[if lt IE 7]><p class="browsehappy">Вы используете <strong>устаревший</strong> браузер. Пожалуйста <a href="http://browsehappy.com">обновите</a> его.</p><![endif]-->
+		div.wrapper
+			div.container
+				aside.wrapper__left
+					div.logo
+						a(href="/")
+							img(src="images/logo.png", alt="ЭпплShop")
+					div.callback
+						div.callback__title Заказать звонок
+						div.form
+							form(action="")
+								div.form__row
+									div.form__col-w50.form__col-title Ваше имя
+									div.form__col-w50
+										input(class="callback__inputText", type="text", placeholder="Константин")
+								div.form__row
+									div.form__col-w50.form__col-title Телефон
+									div.form__col-w50
+										input(class="callback__inputText", type="text", placeholder="+7 (916) 000-00-00")
+								div.form__row
+									div.form__col-w33.form__col-title Дата Звонка
+									div.form__col-w33
+										select(class="callback__select", name="day")
+											- for (var x = 1; x < 24; x++)
+												if (x > 0 && x < 10)
+													option(value="0#{x}") 0#{x}
+												else
+													option(value="#{x}") #{x}
+									div.form__col-w33
+										select(class="callback__select", name="day")
+											- for (var x = 1; x < 61; x++)
+												if (x > 0 && x < 10)
+													option(value="0#{x}") 0#{x}
+												else
+													option(value="#{x}") #{x}
+								div.form__row
+									div.form__col-w100
+										textarea(class="callback__textarea", placeholder="Комментарий")
+								div.form__row
+									div.form__col-w50
+										button.btn Отправить
+									div.form__col-w50.alignRight
+										button.btn.btn-grey Очистить
+					div.gallery
+						ul.gallery__list
+							- for (var x = 1; x < 10; x++)
+								li.gallery__item
+									a(href="#")
+										img(src="images/gal-#{x}.png" alt="")
+					div.contact
+						ul.contact__list
+							li.contact__items: div.contact__items-adress г.Москва ул. Новая 246, офис 214
+							li.contact__items: div.contact__items-phone +7(921) 322-12-32
+				main.wrapper__right
+					div.slider
+						div.slider__wrap
+							ul.slider__list
+								li.slider__item.active
+									a(href="#")
+											img.slider__pic(src="images/slide-1.png" alt="")
+										div.slider__itemInfo
+											div.slider__itemInfo--wrap
+												a(href="#", alt="") iMac за пол цены
+												p Прини свой старый Mac  и получи скидку на новый!
+								li.slider__item
+									a(href="#")
+											img.slider__pic(src="images/slide-2.png" alt="")
+										div.slider__itemInfo
+											div.slider__itemInfo--wrap
+												a(href="#", alt="") До 31 декабря, iPhone 4 за 9900 руб.
+												p Нет денег на шестой iPhone? Купи себе четвертый!
+								li.slider__item
+									a(href="#")
+											img.slider__pic(src="images/slide-3.png" alt="")
+										div.slider__itemInfo
+											div.slider__itemInfo--wrap
+												a(href="#", alt="") Конкурс на концепт IPhone 7
+												p Выйграй iPad Air за самый необычный  и интереный дизайн нового iPhone 7.
+						div.slider__controls
+							a.slider__controls-button.slider__controls-prev Пред.
+							a.slider__controls-button.slider__controls-next След.
+					div.product
+						div.product__title: .product__title-text Популярные товары
+						ul.product__list
+							each img, name in {'Apple Thunderb Display 27"' : 'product-1.png', 'iMac 27"' : 'product-2.png', 'iPhone 5s Gold' : 'product-3.png'}
+								li.product__item
+									div.product__item-pic
+										a(href="#")
+											img(src="images/#{img}" alt="")
+										a(href="#") #{name}
+									ul.product__item-prop
+										each val, key in {'Артикул' : '42787825', 'Опция' : 'включена', 'Цвет' : 'серебристый', 'Размер' : '1280*1245*90', 'Вес' : '9 кг'}
+											li
+												span= key
+												span= val
+					div.product
+						div.product__title: .product__title-text Товары со скидкой
+						ul.product__list
+							each img, name in {'iPad Air Wi-Fi 128GB - Silver' : 'product-4.png', 'Apple iPod nano 7G 16 ГБ Blue' : 'product-5.png', 'Роутер Wi-Fi Apple AirPort' : 'product-6.png'}
+								li.product__item
+									div.product__item-pic
+										a(href="#")
+											img(src="images/#{img}" alt="")
+										a(href="#") #{name}
+									ul.product__item-prop
+										each val, key in {'Артикул' : '42787825', 'Опция' : 'включена', 'Цвет' : 'серебристый', 'Размер' : '1280*1245*90', 'Вес' : '9 кг'}
+											li
+												span= key
+												span= val
+		footer.footer
+			div.container
+				div.pageTop: a(href="#", id="js-pageTop") Наверх
+				div.footer__wrap
+					div.footer__left
+						a.logoWhite(href="#")
+							img(src="images/logo-white.png", alt="")
+					div.footer__center
+						ul.menuLight
+							li.menuLight__title О магазине
+							+listString('menuLight', ['О нас', 'Наши цены', 'Наши скидки', 'Акции'])
+						ul.menuLight
+							li.menuLight__title Каталог
+							+listString('menuLight', ['Смартфоны', 'Планшеты', 'Компьютеры', 'Аксессуары'])
+						ul.menuLight
+							li.menuLight__title Контакты
+							+listString('menuLight', ['Телефоны', 'Адреса', 'Карта проезда', 'Обратная связь'])
+					div.footer__right
+						div.footer__row
+							div.infoShop
+								a(class="infoShop-link", href="#")
+									img(src="../images/info-app-store.png", alt="")
+								a(class="infoShop-link", href="#")
+									img(src="../images/info-google-play.png", alt="")
+						div.footer__row
+							div.socials
+								ul.socials__list
+									- var socials = ['vk','fb','tw']
+									each item, index in socials
+										li.socials__item
+											a(href="#", class="socials__item-link socials__item-" + item)= item
+	script(src="//ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js")
+	<script>window.jQuery || document.write('<script src="bower/jquery/dist/jquery.min.js"><\/script>')</script>
+	<!--[if lt IE 9]><script src="bower/jquery-placeholder/jquery.placeholder.min.js"></script><![endif]-->
+	script(src="js/main.js")

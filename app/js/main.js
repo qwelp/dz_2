@@ -54,4 +54,29 @@ $(document).ready(function($) {
 		}
 	});
 
+	$(".select__wrap-btn").on('click', function(e) {
+		e.preventDefault();
+		var $this = $(this),
+			container = $this.closest('.selectFormWrap'),
+			list = container.find('.select__wrap');
+			list.slideToggle();
+	});
+	$(".callback__item").on('click', function(e) {
+		e.preventDefault();
+		var $this = $(this),
+			container = $this.closest('.selectFormWrap'),
+			list = container.find('.select__wrap'),
+			value = container.find('.select__wrap-btn').find("p");
+
+			value.text($this.text()).css("color", "#5c7b98");
+			list.slideToggle();
+	});
+
+});
+$(window).on('load', function () {
+
+$(".callback__select").mCustomScrollbar({
+		setHeight:240,
+		setWidth:47,
+	});
 });

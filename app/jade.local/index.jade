@@ -14,6 +14,7 @@ html
 		title ЭпплShop
 		link(rel="shortcup icon", href="/favicon.ico", type="images/x-icone")
 		link(rel="icon", href="/favicone.ico", type="image/x-icon")
+		link(rel="stylesheet" href="/bower/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.css")
 		link(rel="stylesheet", media="all", type="text/css", href="css/main.css")
 		script(src="bower/modernizer/modernizr.js")
 	body
@@ -39,19 +40,33 @@ html
 								div.form__row
 									div.form__col-w33.form__col-title Дата Звонка
 									div.form__col-w33
-										select(class="callback__select", name="day")
-											- for (var x = 1; x < 24; x++)
-												if (x > 0 && x < 10)
-													option(value="0#{x}") 0#{x}
-												else
-													option(value="#{x}") #{x}
+										div.selectFormWrap
+											div.select__wrap-btn
+												p 10
+												span.arrowDown
+											div.select__wrap-pr
+												div.select__wrap
+													div.callback__select(data-mcs-theme="qwelp")
+														ul.callback__list
+															- for (var x = 1; x <= 31; x++)
+																if(x < 10)
+																	li.callback__item(data-value='0' + x)= '0' + x
+																else
+																	li.callback__item(data-value=x)= x
 									div.form__col-w33
-										select(class="callback__select", name="day")
-											- for (var x = 1; x < 61; x++)
-												if (x > 0 && x < 10)
-													option(value="0#{x}") 0#{x}
-												else
-													option(value="#{x}") #{x}
+										div.selectFormWrap
+											div.select__wrap-btn
+												p 10
+												span.arrowDown
+											div.select__wrap-pr
+												div.select__wrap
+													div.callback__select(data-mcs-theme="qwelp")
+														ul.callback__list
+															- for (var x = 1; x <= 12; x++)
+																if(x < 10)
+																	li.callback__item(data-value='0' + x)= '0' + x
+																else
+																	li.callback__item(data-value=x)= x
 								div.form__row
 									div.form__col-w100
 										textarea(class="callback__textarea", placeholder="Комментарий")
@@ -69,7 +84,8 @@ html
 					div.contact
 						ul.contact__list
 							li.contact__items: div.contact__items-adress г.Москва ул. Новая 246, офис 214
-							li.contact__items: div.contact__items-phone +7(921) 322-12-32
+							li.contact__items: div.contact__items-phone
+								a(href="tel:79213221232") +7(921) 322-12-32
 				main.wrapper__right
 					div.slider
 						div.slider__wrap
@@ -160,4 +176,5 @@ html
 	script(src="//ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js")
 	<script>window.jQuery || document.write('<script src="bower/jquery/dist/jquery.min.js"><\/script>')</script>
 	<!--[if lt IE 9]><script src="bower/jquery-placeholder/jquery.placeholder.min.js"></script><![endif]-->
+	script(src="/bower/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.js")
 	script(src="js/main.js")

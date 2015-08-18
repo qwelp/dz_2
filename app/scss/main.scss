@@ -107,6 +107,7 @@
 	}
 }
 .menuLight {
+	font-family: elektra_light;
 	float: left;
 	font-size: 14px;
 	color: #FFF;
@@ -120,6 +121,7 @@
 	}
 	&__item-link {
 		font-weight: normal;
+		font-family: elektra_light;
 		color: #FFF;
 	}
 }
@@ -130,15 +132,21 @@
 	&__title {
 		font-size: 25px;
 		color: rgb(92, 123, 152);
-		font-weight: bold;
 		margin-bottom: 20px;
+		font-family: elektra_big;
 	}
 	&__inputText {
 		min-width: 130px;
 	}
 	&__select {
 		margin-left: 13px;
-		min-width: 35px;
+		position: relative;
+		width: 52px;
+		display: inline-block;
+		vertical-align: top;
+		background: #fff;
+
+		overflow: 'auto';
 	}
 	&__textarea {
 		height: 68px;
@@ -174,6 +182,10 @@
 	&__items-phone {
 		background: url("../images/icone-phone.png") no-repeat 0 3px;
 	}
+	& a {
+		color: #5c7b98;
+		text-decoration: none;
+	}
 }
 .product {
 
@@ -188,11 +200,11 @@
 			font-size: 25px;
 			color: #5c7b98;
 			display: inline-block;
-			padding: 0 18px;
+			padding: 0 20px;
 			font-size: 25px;
 			text-align: center;
 			color: #5c7b98;
-			font-weight: bold;
+			font-family: elektra_big;
 		}
 	}
 	&__list {
@@ -200,7 +212,7 @@
 	}
 	&__item {
 		margin-left: 25px;
-		margin-bottom: 35px;
+		margin-bottom: 15px;
 		display: inline-block;
 		vertical-align: top;
 		border: 1px solid #dce2ec;
@@ -216,7 +228,7 @@
 		@include clearfix;
 		margin-bottom: 25px;
 		display: table;
-		height: 100px;
+		height: 90px;
 		& img {
 			float: left;
 			margin-right: 19px;
@@ -234,6 +246,7 @@
 			color: rgb(92, 123, 152);
 			width: 100px;
 			display: inline-block;
+			margin-bottom: 5px;
 		}
 	}
 }

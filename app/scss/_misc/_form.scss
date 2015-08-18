@@ -76,4 +76,109 @@
 	color: rgb(92, 123, 152);
 	white-space: nowrap;
 }
+.mCustomScrollBox {
+	border: 1px solid #dae1eb;
+	background: #FFF;
+}
+.mCS-qwelp.mCSB_scrollTools .mCSB_dragger_bar {
+	border-radius: 0;
+	width: 7px;
+	margin-top: 3px;
+}
+.select__wrap-btn {
+	cursor: pointer;
+	color: #dae1eb;
+	border: 1px solid #dae1eb;
+	background: #FFF;
+	width: 38px;
+	font-size: 12px;
+	margin-left: 13px;
+	padding: 6px  4px 2px 4px;
+	position: relative;
+	&:after {
+		background: #00b9fe;
+		display: block;
+		content: '';
+		width: 22px;
+		height: 24px;
+		position: absolute;
+		right: 0;
+		top: 0;
+	}
+	&:before {
 
+	}
+}
+.arrowDown{
+	overflow:hidden;
+	height:10px;
+	height:20px; width:20px;
+	display:block;
+	position:absolute;
+	top: 1px;
+	right: 1px;
+	z-index: 10;
+	cursor: pointer;
+}
+.arrowDown:before{
+	content:'';
+	height:5px;
+	width:5px;
+	display:block;
+	border:2px solid #FFF;
+	border-right-width:0;
+	border-top-width:0;
+	transform:rotate(-45deg);
+	-webkit-transform:rotate(-45deg);
+	-moz-transform:rotate(-45deg);
+	-o-transform:rotate(-45deg);
+	-ms-transform:rotate(-45deg);
+	position:absolute;
+	bottom:7px;
+	left:7px;
+}
+.select__wrap-pr {
+	position: relative;
+}
+.select__wrap {
+	position: absolute;
+	top: -1px;
+	display: none;
+}
+.callback__select {
+
+}
+.callback__list {
+
+}
+.callback__item {
+
+	color: #5c7b98;
+	margin: 0 0 1px 0;
+	padding: 2px 3px 2px 4px;
+	cursor: pointer;
+	&:hover {
+		background: #dae1eb;
+	}
+}
+.mCSB_container {
+	min-width: 30px;
+	padding: 3px 3px 3px 0;
+}
+
+.mCS-qwelp.mCSB_scrollTools .mCSB_draggerRail{ background-color: #40CAFE; background-color: #FFF; }
+
+.mCS-qwelp.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar{  background-color: #FFF; background-color: #40CAFE; }
+
+.mCS-qwelp.mCSB_scrollTools .mCSB_dragger:hover .mCSB_dragger_bar{ background-color: #40CAFE; }
+
+.mCS-qwelp.mCSB_scrollTools .mCSB_dragger:active .mCSB_dragger_bar,
+.mCS-qwelp.mCSB_scrollTools .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar{ background-color: #40CAFE; }
+
+.mCS-qwelp.mCSB_scrollTools .mCSB_buttonUp{ background-position: -80px 0; }
+
+.mCS-qwelp.mCSB_scrollTools .mCSB_buttonDown{ background-position: -80px -20px; }
+
+.mCS-qwelp.mCSB_scrollTools .mCSB_buttonLeft{ background-position: -80px -40px; }
+
+.mCS-qwelp.mCSB_scrollTools .mCSB_buttonRight{ background-position: -80px -56px; }

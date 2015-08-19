@@ -182,3 +182,127 @@
 .mCS-qwelp.mCSB_scrollTools .mCSB_buttonLeft{ background-position: -80px -40px; }
 
 .mCS-qwelp.mCSB_scrollTools .mCSB_buttonRight{ background-position: -80px -56px; }
+
+/* --------- popups --------- */
+
+.popup {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	display: none;
+}
+
+.popup__overlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: rgba(00, 00, 00, .5);
+}
+
+.popup__content {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translateX(-50%) translateY(-50%);
+	padding: 50px;
+	border-radius: 10px;
+	background: #ffffff;
+}
+
+.popup__close {
+	display: block;
+	background: url('/img/close-btn.png') 0 0 no-repeat;
+	width: 36px;
+	height: 35px;
+	position: absolute;
+	top: -18px;
+	right: -18px;
+}
+
+.popup__content-inner_error {
+	color: #c00;
+}
+
+.error {
+	border: 1px solid #c00 !important;
+}
+
+/* --------- tooltip --------- */
+
+.divider {
+	margin: 50px;
+}
+
+.tooltip {
+	display: inline-block;
+	position: absolute;
+	opacity: 0;
+	transition: opacity .3s;
+}
+
+.tooltip__inner {
+	max-width: 200px;
+	padding: 3px 8px;
+	color: #ffffff;
+	text-align: center;
+	text-decoration: none;
+	background-color: #000;
+	border-radius: 4px;
+	font-size: 12px;
+	white-space: nowrap;
+
+	&:after {
+		content: "";
+		display: block;
+		position: absolute;
+		width: 0;
+		height: 0;
+		border-color: transparent;
+		border-style: solid;
+		border-width: 5px;
+	}
+}
+
+.tooltip_right, .tooltip_left {
+	padding: 0 5px;
+
+	.tooltip__inner {
+		&:after {
+			top: 50%;
+			margin-top: -5px;
+		}
+	}
+}
+
+.tooltip_top, .tooltip_bottom {
+	padding: 5px 0px;
+
+	.tooltip__inner {
+		&:after {
+			left: 50%;
+			margin-left: -5px;
+		}
+	}
+}
+
+$positions: top, left, right, bottom;
+
+@each $position in $positions {
+
+	$length: length($positions);
+	$opposite: nth($positions, ($length - index($positions, $position)) + 1);
+
+	.tooltip_#{$position} {
+		.tooltip__inner {
+			&:after {
+				#{$opposite} : 0;
+				border-#{$position}-color: #000;
+				border-#{$opposite}-width: 0px;
+			}
+		}
+	}
+}

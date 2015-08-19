@@ -28,15 +28,15 @@ html
 					div.callback
 						div.callback__title Заказать звонок
 						div.form
-							form(action="")
+							form(id="js-form" action="mail.php")
 								div.form__row
 									div.form__col-w50.form__col-title Ваше имя
 									div.form__col-w50
-										input(class="callback__inputText", type="text", placeholder="Константин")
+										input(class="callback__inputText", type="text", placeholder="Константин", data-validation="text")
 								div.form__row
 									div.form__col-w50.form__col-title Телефон
 									div.form__col-w50
-										input(class="callback__inputText", type="text", placeholder="+7 (916) 000-00-00")
+										input(class="callback__inputText", type="text", placeholder="+7 (916) 000-00-00", data-validation="text")
 								div.form__row
 									div.form__col-w33.form__col-title Дата Звонка
 									div.form__col-w33
@@ -69,7 +69,7 @@ html
 																	li.callback__item(data-value=x)= x
 								div.form__row
 									div.form__col-w100
-										textarea(class="callback__textarea", placeholder="Комментарий")
+										textarea(class="callback__textarea", placeholder="Комментарий", data-validation="text")
 								div.form__row
 									div.form__col-w50
 										button.btn Отправить
@@ -173,6 +173,17 @@ html
 									each item, index in socials
 										li.socials__item
 											a(href="#", class="socials__item-link socials__item-" + item)= item
+		div.popup#success
+			div.popup__overlay
+			div.popup__content
+				div.popup__content-inner Ваша заявка отправлена
+			a(class="popup__close", href="")
+
+		div.popup#error
+			div.popup__overlay
+			div.popup__content
+				div.popup__content-inner.popup__content-inner_erro Упс, что то пошло не так, попробуйте позже!
+			a(class="popup__close", href="")
 	script(src="//ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js")
 	<script>window.jQuery || document.write('<script src="bower/jquery/dist/jquery.min.js"><\/script>')</script>
 	<!--[if lt IE 9]><script src="bower/jquery-placeholder/jquery.placeholder.min.js"></script><![endif]-->

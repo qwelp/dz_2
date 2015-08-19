@@ -22,17 +22,17 @@
           <div class="callback">
             <div class="callback__title">Заказать звонок</div>
             <div class="form">
-              <form action="">
+              <form id="js-form" action="mail.php">
                 <div class="form__row">
                   <div class="form__col-w50 form__col-title">Ваше имя</div>
                   <div class="form__col-w50">
-                    <input type="text" placeholder="Константин" class="callback__inputText">
+                    <input type="text" placeholder="Константин" data-validation="text" class="callback__inputText">
                   </div>
                 </div>
                 <div class="form__row">
                   <div class="form__col-w50 form__col-title">Телефон</div>
                   <div class="form__col-w50">
-                    <input type="text" placeholder="+7 (916) 000-00-00" class="callback__inputText">
+                    <input type="text" placeholder="+7 (916) 000-00-00" data-validation="text" class="callback__inputText">
                   </div>
                 </div>
                 <div class="form__row">
@@ -113,7 +113,7 @@
                 </div>
                 <div class="form__row">
                   <div class="form__col-w100">
-                    <textarea placeholder="Комментарий" class="callback__textarea"></textarea>
+                    <textarea placeholder="Комментарий" data-validation="text" class="callback__textarea"></textarea>
                   </div>
                 </div>
                 <div class="form__row">
@@ -302,6 +302,18 @@
         </div>
       </div>
     </footer>
+    <div id="success" class="popup">
+      <div class="popup__overlay"></div>
+      <div class="popup__content">
+        <div class="popup__content-inner">Ваша заявка отправлена</div>
+      </div><a href="" class="popup__close"></a>
+    </div>
+    <div id="error" class="popup">
+      <div class="popup__overlay"></div>
+      <div class="popup__content">
+        <div class="popup__content-inner popup__content-inner_erro">Упс, что то пошло не так, попробуйте позже!</div>
+      </div><a href="" class="popup__close"></a>
+    </div>
   </body>
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script><script>window.jQuery || document.write('<script src="bower/jquery/dist/jquery.min.js"><\/script>')</script>
   <!--[if lt IE 9]><script src="bower/jquery-placeholder/jquery.placeholder.min.js"></script><![endif]-->

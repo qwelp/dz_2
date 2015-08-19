@@ -9,7 +9,7 @@
     <meta name="author" content="Bun Vladimir, qwelp">
     <title>ЭпплShop</title>
     <link rel="shortcup icon" href="/favicon.ico" type="images/x-icone">
-    <link rel="icon" href="/favicone.ico" type="image/x-icon">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="/bower/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.css">
     <link rel="stylesheet" media="all" type="text/css" href="css/main.css">
     <script src="bower/modernizer/modernizr.js"></script>
@@ -26,19 +26,20 @@
                 <div class="form__row">
                   <div class="form__col-w50 form__col-title">Ваше имя</div>
                   <div class="form__col-w50">
-                    <input type="text" placeholder="Константин" data-validation="text" class="callback__inputText">
+                    <input name="name" type="text" placeholder="Константин" data-validation="text" class="callback__inputText">
                   </div>
                 </div>
                 <div class="form__row">
                   <div class="form__col-w50 form__col-title">Телефон</div>
                   <div class="form__col-w50">
-                    <input type="text" placeholder="+7 (916) 000-00-00" data-validation="text" class="callback__inputText">
+                    <input name="phone" type="text" placeholder="+7 (916) 000-00-00" data-validation="text" class="callback__inputText">
                   </div>
                 </div>
                 <div class="form__row">
                   <div class="form__col-w33 form__col-title">Дата Звонка</div>
                   <div class="form__col-w33">
                     <div class="selectFormWrap">
+                      <input type="hidden" name="day" value="10" class="valueSelect">
                       <div class="select__wrap-btn">
                         <p>10</p><span class="arrowDown"></span>
                       </div>
@@ -85,6 +86,7 @@
                   </div>
                   <div class="form__col-w33">
                     <div class="selectFormWrap">
+                      <input type="hidden" name="hours" value="10" class="valueSelect">
                       <div class="select__wrap-btn">
                         <p>10</p><span class="arrowDown"></span>
                       </div>
@@ -113,15 +115,15 @@
                 </div>
                 <div class="form__row">
                   <div class="form__col-w100">
-                    <textarea placeholder="Комментарий" data-validation="text" class="callback__textarea"></textarea>
+                    <textarea name="msg" placeholder="Комментарий" data-validation="text" class="callback__textarea"></textarea>
                   </div>
                 </div>
                 <div class="form__row">
                   <div class="form__col-w50">
-                    <button class="btn">Отправить</button>
+                    <input type="submit" value="Отправить" class="btn">
                   </div>
                   <div class="form__col-w50 alignRight">
-                    <button class="btn btn-grey">Очистить</button>
+                    <button type="reset" class="btn btn-grey">Очистить</button>
                   </div>
                 </div>
               </form>
@@ -311,7 +313,7 @@
     <div id="error" class="popup">
       <div class="popup__overlay"></div>
       <div class="popup__content">
-        <div class="popup__content-inner popup__content-inner_erro">Упс, что то пошло не так, попробуйте позже!</div>
+        <div class="popup__content-inner popup__content-inner_error">Упс, что то пошло не так, попробуйте позже!</div>
       </div><a href="" class="popup__close"></a>
     </div>
   </body>

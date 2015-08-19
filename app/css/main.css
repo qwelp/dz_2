@@ -539,38 +539,42 @@ p {
 /* --------- form --------- */
 ::-webkit-input-placeholder {
   font-size: 13px;
-  font-family: elektra_light_proregular, Arial, sans-serif;
+  font-family: elektra_light;
   color: #dae1eb; }
 
 ::-moz-placeholder {
   font-size: 13px;
-  font-family: elektra_light_proregular, Arial, sans-serif;
+  font-family: elektra_light;
   color: #dae1eb; }
 
 /* Firefox 19+ */
 :-moz-placeholder {
   font-size: 13px;
-  font-family: elektra_light_proregular, Arial, sans-serif;
+  font-family: elektra_light;
   color: #dae1eb; }
 
 /* Firefox 18- */
 :-ms-input-placeholder {
   font-size: 13px;
-  font-family: elektra_light_proregular, Arial, sans-serif;
+  font-family: elektra_light;
   color: #dae1eb; }
 
 .btn {
   font-size: 14px;
   font-weight: bold;
-  padding: 8px 5px;
+  padding: 7px 5px;
   border: 0;
   background: #00b9fe;
   color: #FFF;
+  position: relative;
+  top: -1px;
   transition: all 0.5s ease; }
   .btn:hover {
     background: #1483ac; }
 
 .btn-grey {
+  top: 0;
+  padding: 8px 5px;
   background: #dae1eb; }
   .btn-grey:hover {
     background: #c3cede; }
@@ -679,7 +683,8 @@ p {
 .select__wrap {
   position: absolute;
   top: -1px;
-  display: none; }
+  display: none;
+  z-index: 10; }
 
 .callback__item {
   color: #5c7b98;

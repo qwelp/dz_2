@@ -59,16 +59,20 @@ $(document).ready(function($) {
 		var $this = $(this),
 			container = $this.closest('.selectFormWrap'),
 			list = container.find('.select__wrap');
+
 			list.slideToggle();
+
 	});
 	$(".callback__item").on('click', function(e) {
 		e.preventDefault();
 		var $this = $(this),
 			container = $this.closest('.selectFormWrap'),
 			list = container.find('.select__wrap'),
-			value = container.find('.select__wrap-btn').find("p");
+			value = container.find('.select__wrap-btn').find("p"),
+			valueSelect = container.find('.valueSelect');
 
 			value.text($this.text()).css("color", "#5c7b98");
+			valueSelect.attr("value", $this.text());
 			list.slideToggle();
 	});
 
@@ -91,6 +95,17 @@ $(document).ready(function($) {
 				}
 			});
 		}
+	});
+	$('#js-form').on('reset', function(e) {
+		e.preventDefault();
+		var
+			$this = $(this),
+			container = $this.closest('#js-form'),
+			namePost = container.find('[name]');
+
+			$(namePost).each(function(index, el) {
+				$(this).removeClass('error');
+			});
 	});
 
 });

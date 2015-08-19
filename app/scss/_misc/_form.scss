@@ -1,36 +1,40 @@
 ::-webkit-input-placeholder {
 	font-size: 13px;
-	font-family: $body-font;
+	font-family: elektra_light;
 	color: rgb(218, 225, 235);
 }
 ::-moz-placeholder          {
 	font-size: 13px;
-	font-family: $body-font;
+	font-family: elektra_light;
 	color: rgb(218, 225, 235);
 }/* Firefox 19+ */
 :-moz-placeholder           {
 	font-size: 13px;
-	font-family: $body-font;
+	font-family: elektra_light;
 	color: rgb(218, 225, 235);
 }/* Firefox 18- */
 :-ms-input-placeholder      {
 	font-size: 13px;
-	font-family: $body-font;
+	font-family: elektra_light;
 	color: rgb(218, 225, 235);
 }
 .btn {
 	font-size: 14px;
 	font-weight: bold;
-	padding: 8px 5px;
+	padding: 7px 5px;
 	border: 0;
 	background: #00b9fe;
 	color: #FFF;
+	position: relative;
+	top: -1px;
 	transition: all .5s ease;
 	&:hover {
 		background: #1483ac;
 	}
 }
 .btn-grey {
+	top: 0;
+	padding: 8px 5px;
 	background: #dae1eb;
 	&:hover{
 		background: #c3cede;
@@ -144,6 +148,7 @@
 	position: absolute;
 	top: -1px;
 	display: none;
+	z-index: 10;
 }
 .callback__select {
 

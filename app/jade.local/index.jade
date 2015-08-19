@@ -13,7 +13,7 @@ html
 		meta(name="author", content="Bun Vladimir, qwelp")
 		title ЭпплShop
 		link(rel="shortcup icon", href="/favicon.ico", type="images/x-icone")
-		link(rel="icon", href="/favicone.ico", type="image/x-icon")
+		link(rel="icon", href="/favicon.ico", type="image/x-icon")
 		link(rel="stylesheet" href="/bower/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.css")
 		link(rel="stylesheet", media="all", type="text/css", href="css/main.css")
 		script(src="bower/modernizer/modernizr.js")
@@ -32,15 +32,16 @@ html
 								div.form__row
 									div.form__col-w50.form__col-title Ваше имя
 									div.form__col-w50
-										input(class="callback__inputText", type="text", placeholder="Константин", data-validation="text")
+										input(class="callback__inputText", name="name", type="text", placeholder="Константин", data-validation="text")
 								div.form__row
 									div.form__col-w50.form__col-title Телефон
 									div.form__col-w50
-										input(class="callback__inputText", type="text", placeholder="+7 (916) 000-00-00", data-validation="text")
+										input(class="callback__inputText", name="phone", type="text", placeholder="+7 (916) 000-00-00", data-validation="text")
 								div.form__row
 									div.form__col-w33.form__col-title Дата Звонка
 									div.form__col-w33
 										div.selectFormWrap
+											input(type="hidden", class="valueSelect", name="day", value="10")
 											div.select__wrap-btn
 												p 10
 												span.arrowDown
@@ -55,6 +56,7 @@ html
 																	li.callback__item(data-value=x)= x
 									div.form__col-w33
 										div.selectFormWrap
+											input(type="hidden", class="valueSelect", name="hours", value="10")
 											div.select__wrap-btn
 												p 10
 												span.arrowDown
@@ -69,12 +71,12 @@ html
 																	li.callback__item(data-value=x)= x
 								div.form__row
 									div.form__col-w100
-										textarea(class="callback__textarea", placeholder="Комментарий", data-validation="text")
+										textarea(class="callback__textarea", name="msg", placeholder="Комментарий", data-validation="text")
 								div.form__row
 									div.form__col-w50
-										button.btn Отправить
+										input(type="submit", class="btn", value="Отправить")
 									div.form__col-w50.alignRight
-										button.btn.btn-grey Очистить
+										button.btn.btn-grey(type="reset") Очистить
 					div.gallery
 						ul.gallery__list
 							- for (var x = 1; x < 10; x++)
@@ -182,7 +184,7 @@ html
 		div.popup#error
 			div.popup__overlay
 			div.popup__content
-				div.popup__content-inner.popup__content-inner_erro Упс, что то пошло не так, попробуйте позже!
+				div.popup__content-inner.popup__content-inner_error Упс, что то пошло не так, попробуйте позже!
 			a(class="popup__close", href="")
 	script(src="//ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js")
 	<script>window.jQuery || document.write('<script src="bower/jquery/dist/jquery.min.js"><\/script>')</script>
